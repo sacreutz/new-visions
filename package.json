@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sacreutz/new-visions/issues"
   },
-  "homepage": "https://github.com/sacreutz/new-visions#readme"
+  "homepage": "https://github.com/sacreutz/new-visions#readme",
+  "engines": {
+    "node": "10.x"
+  }
 }
