@@ -4,7 +4,8 @@
   "description": "Instructions for running the code:",
   "main": "dashboard.html",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "dashboard.html"
   },
   "repository": {
     "type": "git",
