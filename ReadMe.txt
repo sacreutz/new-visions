@@ -1,10 +1,8 @@
 Instructions for running the code:
 
-Install live-server if you don't have it already by running: npm install -g live-server
-Navigate in your terminal to where your pages live by running: cd <path-to-content>
-Start the server with: live-server .
-Open localhost:8080 in a browser.
-Click on dashboard.html
+Navigate in a terminal to where the code base is located and run npm install.
+Run npm start.
+Click on dashboard.html when the browser window opens.
 
 
 
