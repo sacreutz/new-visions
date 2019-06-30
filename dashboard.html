@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
-<script type="text/javascript" src="dashboard.js"></script>
   <title>New Visions Dashboard</title>
 </head>
 <body>
@@ -19,17 +15,13 @@
 
     <button id="getText">Search</button>
   </div>
-
-
   <div id="output">
-
   </div>
 </div>
 <style>
  h1 {
    color: blue;
    text-decoration: underline;
-
  }
 
  #settings {
@@ -61,38 +53,29 @@ slider.oninput = function() {
 document.getElementById('getText').addEventListener('click', getText)
 function getText(){
   fetch('students.json')
-  .then((res) => res.text())
+  .then((res) => res.json())
   .then((data) => {
-    var as = JSON.parse(data)
-    const arr1 = as.filter(d => d.attendancePercentage < slider.value)
+    //var as = JSON.parse(data)
+    const arr1 = data.filter(d => d.attendancePercentage < slider.value)
+    let output = '<h2> </h2>'
 
-
-      let output = '<h2> </h2>'
-
-      arr1.forEach(function(student){
-        output += `
-          <ul>
-            <li> Name: ${student.firstName} ${student.lastName}  </li>
-            <li> Attendance Percentage: ${student.attendancePercentage} </li>
-            <li> Guidance Counselor: ${student.guidanceCounselor}</li>
-            <li>Parent Contact: ${student.homePhoneNumber}</li>
-          </ul>
+    arr1.forEach(function(student){
+      output += `
+          <div>
+            <h3> ${student.firstName} ${student.lastName}  </h3>
+            <p> Attendance Percentage: ${student.attendancePercentage} <p>
+            <p> Guidance Counselor: ${student.guidanceCounselor}</p>
+            <p>Parent Contact: ${student.homePhoneNumber}</p>
+          </div>
         `
       })
       document.getElementById('output').innerHTML = output;
-
     })
     .catch((err) => console.log(err))
   }
 
-
-
-
-
 </script>
 
 </body>
-
-
 
 </html>
