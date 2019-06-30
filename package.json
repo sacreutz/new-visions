@@ -5,7 +5,7 @@
   "main": "dashboard.html",
   "scripts": {
     "test": "test",
-    "start": "dashboard.html"
+    "start": "./dashboard.html"
   },
   "repository": {
     "type": "git",
