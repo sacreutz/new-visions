@@ -1,0 +1,19 @@
+{
+  "name": "new-visions",
+  "version": "1.0.0",
+  "description": "Instructions for running the code:",
+  "main": "dashboard.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sacreutz/new-visions.git"
+  },
+  "author": "SC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sacreutz/new-visions/issues"
+  },
+  "homepage": "https://github.com/sacreutz/new-visions#readme"
+}
